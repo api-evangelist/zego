@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/zego-partner-openapi.yml
+notes: >-
+  Entity graph derived from the documented Partner API operations. Field-level
+  relationships beyond the customer/shift/policy linkage are not fully specified
+  in the published docs.
+entities:
+  - name: Customer
+    identifier: customerNumber
+    operations: [registerCustomer, getCustomerStatus, validateCustomerNumber, confirmCustomerMatch, enrolCustomerPublicLiability]
+  - name: Shift
+    identifier: id
+    operations: [startShift, endShift, startBatchShifts, endBatchShifts, createShift, updateShift]
+  - name: Policy
+    operations: [createPolicy]
+  - name: Occupation
+    operations: [listPublicLiabilityOccupations]
+relationships:
+  - from: Shift
+    to: Customer
+    type: belongs_to
+    via: customerNumber
+  - from: Policy
+    to: Customer
+    type: belongs_to
+    via: customerNumber
+  - from: Policy
+    to: Occupation
+    type: belongs_to
+    via: occupation

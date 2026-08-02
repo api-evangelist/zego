@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/zego-partner-openapi.yml
+server:
+  name: zego-partner
+  transport: http
+notes: >-
+  No official hosted Zego MCP server was found. This is a candidate tool list
+  derived one-to-one from the documented Partner API operations.
+tools:
+  - name: start_shift
+    description: Start an individual customer's shift (activate cover)
+    source_operation: openapi/zego-partner-openapi.yml#startShift
+  - name: end_shift
+    description: End a customer's shift (deactivate cover)
+    source_operation: openapi/zego-partner-openapi.yml#endShift
+  - name: start_batch_shifts
+    description: Start shifts for multiple customers
+    source_operation: openapi/zego-partner-openapi.yml#startBatchShifts
+  - name: end_batch_shifts
+    description: End shifts for multiple customers
+    source_operation: openapi/zego-partner-openapi.yml#endBatchShifts
+  - name: create_shift
+    description: Create a shift (open or finished)
+    source_operation: openapi/zego-partner-openapi.yml#createShift
+  - name: update_shift
+    description: Update a shift with an end time
+    source_operation: openapi/zego-partner-openapi.yml#updateShift
+  - name: get_customer_status
+    description: Retrieve customer insurance status
+    source_operation: openapi/zego-partner-openapi.yml#getCustomerStatus
+  - name: validate_customer_number
+    description: Validate a customer number exists
+    source_operation: openapi/zego-partner-openapi.yml#validateCustomerNumber
+  - name: enrol_customer_public_liability
+    description: Create and enrol a customer on public liability
+    source_operation: openapi/zego-partner-openapi.yml#enrolCustomerPublicLiability
+  - name: register_customer
+    description: Create a new customer in the system
+    source_operation: openapi/zego-partner-openapi.yml#registerCustomer
+  - name: create_policy
+    description: Create a one-day fixed-term public liability policy
+    source_operation: openapi/zego-partner-openapi.yml#createPolicy
+  - name: list_public_liability_occupations
+    description: List supported public liability occupations
+    source_operation: openapi/zego-partner-openapi.yml#listPublicLiabilityOccupations
+  - name: confirm_customer_match
+    description: Confirm or report customer matching status
+    source_operation: openapi/zego-partner-openapi.yml#confirmCustomerMatch

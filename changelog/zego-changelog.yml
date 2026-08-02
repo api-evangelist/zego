@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.zego.com/
+scheme: doc-version
+current_version: '1.12'
+notes: >-
+  Zego's partner developer documentation publishes a dated version history of
+  documentation changes rather than a per-release API changelog. The recorded
+  window spans v1.0 (2017) to v1.12 (2018); exact per-entry highlights beyond
+  version and date are not itemised in the published history.
+entries:
+  - version: '1.12'
+    date: '2018-12-17'
+    breaking: false
+    highlights: Documentation update.
+  - version: '1.0'
+    date: '2017-03-30'
+    breaking: false
+    highlights: Initial published partner API documentation.

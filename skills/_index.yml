@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/zego-partner-openapi.yml
+skills:
+  - file: zego-manage-shift-cover.md
+    name: Manage Zego shift cover for a customer
+    api: openapi/zego-partner-openapi.yml
+    operations: [validateCustomerNumber, getCustomerStatus, startShift, endShift]
+  - file: zego-enrol-public-liability.md
+    name: Enrol a Zego customer on public liability cover
+    api: openapi/zego-partner-openapi.yml
+    operations: [registerCustomer, listPublicLiabilityOccupations, enrolCustomerPublicLiability, createPolicy]

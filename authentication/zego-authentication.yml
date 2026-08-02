@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.zego.com/
+docs: https://developer.zego.com/
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+notes: >-
+  The Zego Partner API uses token-based authentication. Partners are issued an
+  authorization token by the Zego Partnerships Manager and send it in the
+  Authorization header on every request. There is no self-serve OAuth flow; the
+  API is partner/work-provider gated. Inbound webhooks are authenticated by
+  Zego with an X-ZEGO-SIGNATURE header on the request.
+schemes:
+  - name: partnerToken
+    type: apiKey
+    in: header
+    parameter: Authorization
+    sources: [openapi/zego-partner-openapi.yml]
+    description: >-
+      Partner authorization token issued by the Zego Partnerships Manager.

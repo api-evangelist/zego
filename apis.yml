@@ -1,8 +1,31 @@
 aid: zego
-name: zego
-description: zego is a company surfaced as a portfolio company of balderton-capital, general-catalyst,
-  qiming, techstars and added to the API Evangelist network as a stub for enrichment. This profile is
-  a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zego.png
+name: Zego
+description: >-
+  Zego is an FCA-regulated UK insurtech providing flexible, technology-driven
+  motor and public-liability insurance built for the gig economy. Its telematics
+  app (Sense) rewards safe driving, and it covers food-delivery and courier
+  riders, private-hire and taxi drivers, van drivers, fleets, and learner
+  drivers with monthly or annual policies. Zego works with partners such as
+  Uber, Deliveroo, Just Eat and Amazon Flex, has served around 750,000 drivers
+  and sold over 94 million policies. Beyond consumer products, Zego operates a
+  RESTful Partner API (developer.zego.com, base URL api.zego.com) that lets work
+  providers activate and deactivate insurance cover per shift, register and
+  validate customers, enrol customers on public liability, issue fixed-term
+  policies, and match external users to Zego customers, with signed webhooks for
+  sign-up integration.
 url: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,19 +34,186 @@ x-backed-by:
 - general-catalyst
 - qiming
 - techstars
-x-tier: stub
-x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Insurance
+- Insurtech
+- Motor Insurance
+- Gig Economy
+- Telematics
+- Fleet Insurance
+- Public Liability
+- Partner API
+apis:
+- aid: zego:zego-customer-integration-api
+  name: Zego Customer Integration API
+  description: Match external users to Zego customers.
+  humanURL: https://developer.zego.com/
+  baseURL: https://api.zego.com
+  tags:
+  - Customer Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/zego-customer-integration-api-openapi.yml
+  - type: Documentation
+    url: https://developer.zego.com/
+  - type: Authentication
+    url: authentication/zego-authentication.yml
+  - type: Conventions
+    url: conventions/zego-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/zego-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/zego-changelog.yml
+  - type: Webhooks
+    url: asyncapi/zego-webhooks.yml
+  - type: ErrorCatalog
+    url: errors/zego-problem-types.yml
+  - type: DataModel
+    url: data-model/zego-data-model.yml
+  - type: LLMsTxt
+    url: llms/zego-llms.txt
+- aid: zego:zego-customers-api
+  name: Zego Customers API
+  description: Customer status, validation, registration and enrolment.
+  humanURL: https://developer.zego.com/
+  baseURL: https://api.zego.com
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/zego-customers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.zego.com/
+  - type: Authentication
+    url: authentication/zego-authentication.yml
+  - type: Conventions
+    url: conventions/zego-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/zego-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/zego-changelog.yml
+  - type: Webhooks
+    url: asyncapi/zego-webhooks.yml
+  - type: ErrorCatalog
+    url: errors/zego-problem-types.yml
+  - type: DataModel
+    url: data-model/zego-data-model.yml
+  - type: LLMsTxt
+    url: llms/zego-llms.txt
+- aid: zego:zego-occupations-api
+  name: Zego Occupations API
+  description: Supported public liability occupations.
+  humanURL: https://developer.zego.com/
+  baseURL: https://api.zego.com
+  tags:
+  - Occupations
+  properties:
+  - type: OpenAPI
+    url: openapi/zego-occupations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.zego.com/
+  - type: Authentication
+    url: authentication/zego-authentication.yml
+  - type: Conventions
+    url: conventions/zego-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/zego-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/zego-changelog.yml
+  - type: Webhooks
+    url: asyncapi/zego-webhooks.yml
+  - type: ErrorCatalog
+    url: errors/zego-problem-types.yml
+  - type: DataModel
+    url: data-model/zego-data-model.yml
+  - type: LLMsTxt
+    url: llms/zego-llms.txt
+- aid: zego:zego-policies-api
+  name: Zego Policies API
+  description: Fixed-term public liability policies.
+  humanURL: https://developer.zego.com/
+  baseURL: https://api.zego.com
+  tags:
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/zego-policies-api-openapi.yml
+  - type: Documentation
+    url: https://developer.zego.com/
+  - type: Authentication
+    url: authentication/zego-authentication.yml
+  - type: Conventions
+    url: conventions/zego-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/zego-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/zego-changelog.yml
+  - type: Webhooks
+    url: asyncapi/zego-webhooks.yml
+  - type: ErrorCatalog
+    url: errors/zego-problem-types.yml
+  - type: DataModel
+    url: data-model/zego-data-model.yml
+  - type: LLMsTxt
+    url: llms/zego-llms.txt
+- aid: zego:zego-shifts-api
+  name: Zego Shifts API
+  description: Start and end insurance cover periods (shifts) for customers.
+  humanURL: https://developer.zego.com/
+  baseURL: https://api.zego.com
+  tags:
+  - Shifts
+  properties:
+  - type: OpenAPI
+    url: openapi/zego-shifts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.zego.com/
+  - type: Authentication
+    url: authentication/zego-authentication.yml
+  - type: Conventions
+    url: conventions/zego-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/zego-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/zego-changelog.yml
+  - type: Webhooks
+    url: asyncapi/zego-webhooks.yml
+  - type: ErrorCatalog
+    url: errors/zego-problem-types.yml
+  - type: DataModel
+    url: data-model/zego-data-model.yml
+  - type: LLMsTxt
+    url: llms/zego-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1
 common:
+- type: VulnerabilityDisclosure
+  url: security/zego-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.zego.com/security/
+- type: DomainSecurity
+  url: security/zego-domain-security.yml
 - type: Website
   url: https://www.zego.com/
+- type: Documentation
+  url: https://developer.zego.com/
+- type: Blog
+  url: https://www.zego.com/blog/
+- type: Support
+  url: https://www.zego.com/help/
+- type: TermsOfService
+  url: https://www.zego.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://www.zego.com/privacy/

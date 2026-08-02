@@ -1,0 +1,22 @@
+{
+  "provider": "zego",
+  "sources": [
+    "zego-customer-integration-api-openapi.yml",
+    "zego-customers-api-openapi.yml",
+    "zego-occupations-api-openapi.yml",
+    "zego-policies-api-openapi.yml",
+    "zego-shifts-api-openapi.yml"
+  ],
+  "outputs": [
+    "zego-customer-integration-api-openapi.yml",
+    "zego-customers-api-openapi.yml",
+    "zego-occupations-api-openapi.yml",
+    "zego-policies-api-openapi.yml",
+    "zego-shifts-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.zego.com/
+authentication:
+  style: apiKey
+  header: Authorization
+  notes: Partner token issued by the Zego Partnerships Manager.
+versioning:
+  style: uri-path
+  values: [v1, v2]
+  current: v2
+  notes: >-
+    Endpoints are namespaced by version in the path (e.g. /v1/shift/login/,
+    /v2/shift/). v2 is the current generation; several v1 endpoints remain
+    documented for existing partners.
+idempotency:
+  supported: false
+  notes: >-
+    The published partner documentation does not document an idempotency-key
+    header or retry-safe semantics.
+pagination:
+  supported: unknown
+  notes: List endpoints (e.g. public-liability-occupations) are not documented
+    as paginated in the partner docs.
+request_tracing:
+  header: null
+  notes: No request-id / correlation header documented.
+error_envelope:
+  style: http-status
+  notes: >-
+    Errors are signalled with HTTP status codes (400 invalid request, 401
+    unauthorized, 404 not found). No RFC 9457 problem+json envelope is
+    documented.
+webhooks:
+  signature_header: X-ZEGO-SIGNATURE
+  notes: >-
+    Outbound webhooks (customer sign-up integration) are signed by Zego with an
+    X-ZEGO-SIGNATURE header; the work provider's endpoint replies 204 (match
+    found) or 404 (no match).
+cross_links:
+  authentication: authentication/zego-authentication.yml
+  lifecycle: lifecycle/zego-lifecycle.yml
+  errors: errors/zego-problem-types.yml
+  webhooks: asyncapi/zego-webhooks.yml

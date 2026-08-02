@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.zego.com/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://developer.zego.com/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation policy or RFC 8594 Sunset/Deprecation header
+    support is documented; v1 endpoints coexist with v2.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  The partner documentation carries a dated version history from v1.0
+  (30-Mar-2017) through v1.12 (17-Dec-2018), tracking documentation changes
+  rather than a formal API lifecycle policy. No public status page was found.

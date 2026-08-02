@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.zego.com/
+spec_type: Webhooks
+signature:
+  header: X-ZEGO-SIGNATURE
+  notes: Outbound webhook requests from Zego are signed with this header.
+webhooks:
+  - name: customer-signup-integration
+    direction: outbound
+    transport: http
+    method: POST
+    description: >-
+      When a customer completes sign-up, Zego POSTs to a URL configured by the
+      work provider so the provider can match the new customer to one of its own
+      users.
+    payload_fields:
+      - customerNumber
+      - email
+      - phoneNumber (optional)
+    expected_responses:
+      - status: 204
+        meaning: Match found for the customer.
+      - status: 404
+        meaning: No matching user found.
