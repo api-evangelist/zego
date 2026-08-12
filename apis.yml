@@ -199,6 +199,10 @@ x-enrichment:
   artifacts_added: 15
   pass: local-v1
 common:
+- type: AgentSkill
+  url: skills/zego-enrol-public-liability.md
+- type: MCPServer
+  url: mcp/zego-mcp.yml
 - type: VulnerabilityDisclosure
   url: security/zego-vulnerability-disclosure.yml
 - type: Security
