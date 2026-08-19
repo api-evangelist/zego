@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zego Partner Customer Integration Occupations API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Occupations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List supported public liability occupations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.zego.com/v2/public-liability-occupations/"
+          },
+          "docs": "List supported public liability occupations"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

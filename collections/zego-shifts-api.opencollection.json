@@ -1,0 +1,124 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zego Partner Customer Integration Shifts API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Shifts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Start an individual customer's shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v1/shift/login/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Starts a shift, activating insurance cover for a single customer."
+        },
+        {
+          "info": {
+            "name": "End a customer's shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v1/shift/logout/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Ends a shift, deactivating insurance cover for a single customer."
+        },
+        {
+          "info": {
+            "name": "Start shifts for multiple customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v1/batch/login/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start shifts for multiple customers"
+        },
+        {
+          "info": {
+            "name": "End shifts for multiple customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v1/batch/logout/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "End shifts for multiple customers"
+        },
+        {
+          "info": {
+            "name": "Create a shift (open or finished)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v2/shift/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a shift that may be left open or created with an end time."
+        },
+        {
+          "info": {
+            "name": "Update a shift with an end time",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.zego.com/v2/shift/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Identifier of the shift to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a shift with an end time"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

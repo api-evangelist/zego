@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zego Partner Customer Integration Customers API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve customer insurance status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.zego.com/v1/user/status/"
+          },
+          "docs": "Retrieve customer insurance status"
+        },
+        {
+          "info": {
+            "name": "Validate a customer number exists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.zego.com/v1/validate/customer-number/:customerNumber",
+            "params": [
+              {
+                "name": "customerNumber",
+                "value": "",
+                "type": "path",
+                "description": "The Zego customer number to validate."
+              }
+            ]
+          },
+          "docs": "Validate a customer number exists"
+        },
+        {
+          "info": {
+            "name": "Create and enrol a customer on public liability",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v2/customer/enrol/public-liability/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create and enrol a customer on public liability"
+        },
+        {
+          "info": {
+            "name": "Create a new customer in the system",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v2/customer/register/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new customer in the system"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

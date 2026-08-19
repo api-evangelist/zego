@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Zego Partner Customer Integration API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customer Integration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Confirm or report customer matching status",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.zego.com/v1/match/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Confirm or report customer matching status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
