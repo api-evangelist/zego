@@ -1,11 +1,7 @@
 {
   "provider": "zego",
   "sources": [
-    "zego-customer-integration-api-openapi.yml",
-    "zego-customers-api-openapi.yml",
-    "zego-occupations-api-openapi.yml",
-    "zego-policies-api-openapi.yml",
-    "zego-shifts-api-openapi.yml"
+    "_original/zego-partner-openapi.yml"
   ],
   "outputs": [
     "zego-customer-integration-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "zego-partner-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "zego-customer-integration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zego-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zego-occupations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zego-policies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "zego-shifts-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
