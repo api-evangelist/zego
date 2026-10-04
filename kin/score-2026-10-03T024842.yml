@@ -1,24 +1,22 @@
-# Kin Score artifact — zego — 2026-08-25T154045
+# Kin Score artifact — zego — 2026-10-03T024842
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: zego
-  schema_version: 0.14.0
-  scored_at: '2026-08-25'
-  run_ts: 2026-08-25T154045
-  composite: 22.4
-  band: emerging
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T024842
+  composite: 26.8
+  band: thin
   facets:
-    discoverability: 74.1
-    contract_quality: 21.1
-    governance: 0.0
-    operational_transparency: 10.5
-    developer_ergonomics: 18.5
-    commercial_clarity: 21.1
+    discoverability: 66.1
+    contract_quality: 20.8
     contract_governance: 0.0
+    operational_transparency: 34.2
+    developer_ergonomics: 30.4
     access_clarity: 21.1
   agent_readiness:
-    score: 20.7
+    score: 21.4
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -27,7 +25,7 @@ kin_score:
       mcp_server: false
       auth_clarity: bearer
       idempotency: false
-      error_semantics: false
+      error_semantics: derived
       openapi_examples: false
       rate_limit_signal: false
       event_surface_described: true
@@ -44,7 +42,7 @@ kin_score:
     applies: true
     regime: Insurance
     regime_id: insurance
-    score: 30.3
+    score: 22.8
     matched_via: tags
   provenance:
     mcp: derived
